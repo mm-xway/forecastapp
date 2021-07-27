@@ -51,7 +51,7 @@ jobs:
         uses: garygrossgarten/github-action-ssh@v0.5.0
         with:
           # Command to execute on the remote server.
-          command: sh /datadrive/apim-cli/apim-cli-1.3.10/scripts/apim.sh api import -c /datadrive/staging.json -s api-env
+          command: sh /datadrive/apim-cli/apim-cli-1.3.10/scripts/apim.sh api import -c /datadrive/apis/apim-config/staging.json -s api-env
           # Hostname or IP address of the server.
           host: ${{ secrets.V77HOST }}
           # Username for authentication.
