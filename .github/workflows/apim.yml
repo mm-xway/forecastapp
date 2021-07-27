@@ -1,0 +1,58 @@
+name: Publish API to Axway API Manager
+
+on:
+  # Triggers the workflow on push or pull request events but only for the main branch
+  push:
+    branches: [ main ]
+    paths: apim-config/**
+  
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch: 
+
+# A workflow run is made up of one or more jobs that can run sequentially or in parallel
+jobs:
+  # This workflow contains a single job called "build"
+  VerifyEndpoint:
+    # The type of runner that the job will run on
+    runs-on: ubuntu-latest
+
+    # Steps represent a sequence of tasks that will be executed as part of the job
+    steps:
+      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
+      - uses: actions/checkout@v2
+
+      # Check Azure App service endpoint 
+      - name: Validate swagger endpoint 
+        run: |
+          echo "Checking if API Gateway is up and running.."
+          status_code=$(curl -o -I -L -s -w "%{http_code}" https://forecastdemoapp.azurewebsites.net/swagger/v1/swagger.json)
+          if [[ $status_code == 200 ]]; 
+          then
+            echo "Endpoint verified - Up and running.."
+            echo "Proceed with virtualization.."
+          else 
+            echo "Endpoint is down! Cannot continue, stopping the workflow"
+          fi  
+      
+      # Copy APIM config
+      - name: Use API config 
+        uses: appleboy/scp-action@master
+        with:
+          host: ${{ secrets.V77HOST }}
+          username: ${{ secrets.V77USERNAME }}
+          password: ${{ secrets.V77PASSWORD }}
+          port: ${{ secrets.V77PORT }}
+          source: "/apim-config/staging.json"
+          target: "/datadrive/apis"
+      
+      # APIM CLI
+      - name: Run APIM CLI
+        uses: garygrossgarten/github-action-ssh@v0.5.0
+        with:
+          # Command to execute on the remote server.
+          command: sh /datadrive/apim-cli/apim-cli-1.3.10/scripts/apim.sh api import -c /datadrive/staging.json -s api-env
+          # Hostname or IP address of the server.
+          host: ${{ secrets.V77HOST }}
+          # Username for authentication.
+          username: ${{ secrets.V77USERNAME }}
+          password: ${{ secrets.V77PASSWORD }}

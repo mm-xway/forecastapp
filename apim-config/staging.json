@@ -1,0 +1,9 @@
+
+{
+    "name": "Forecast Service",
+    "path": "/forecast/api/v1",
+    "state": "unpublished",
+    "version": "1.0.0",
+    "apiDefinition": "https://forecastdemoapp.azurewebsites.net/swagger/v1/swagger.json",
+    "organization": "API Development"
+}
