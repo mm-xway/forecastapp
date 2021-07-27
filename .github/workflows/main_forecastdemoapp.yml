@@ -7,6 +7,9 @@ on:
   push:
     branches:
       - main
+    paths-ignore:
+      - 'apim-config/**'
+      - '.github/workflows/apim.yml'
 
 jobs:
   build-and-deploy:
