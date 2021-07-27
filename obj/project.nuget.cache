@@ -1,0 +1,15 @@
+{
+  "version": 2,
+  "dgSpecHash": "aZPjlYo8bhIN1XP3kDH99m6zmxItBxf7UNJ8xa9GwL2AStgqu1h3i7fSMqDxIJ/xLHtlL47vjM2HdlE5wHdy+A==",
+  "success": true,
+  "projectFilePath": "C:\\myvault\\dotnetdemos\\forecast\\forecast.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\mmone\\.nuget\\packages\\microsoft.extensions.apidescription.server\\3.0.0\\microsoft.extensions.apidescription.server.3.0.0.nupkg.sha512",
+    "C:\\Users\\mmone\\.nuget\\packages\\microsoft.openapi\\1.2.3\\microsoft.openapi.1.2.3.nupkg.sha512",
+    "C:\\Users\\mmone\\.nuget\\packages\\swashbuckle.aspnetcore\\5.6.3\\swashbuckle.aspnetcore.5.6.3.nupkg.sha512",
+    "C:\\Users\\mmone\\.nuget\\packages\\swashbuckle.aspnetcore.swagger\\5.6.3\\swashbuckle.aspnetcore.swagger.5.6.3.nupkg.sha512",
+    "C:\\Users\\mmone\\.nuget\\packages\\swashbuckle.aspnetcore.swaggergen\\5.6.3\\swashbuckle.aspnetcore.swaggergen.5.6.3.nupkg.sha512",
+    "C:\\Users\\mmone\\.nuget\\packages\\swashbuckle.aspnetcore.swaggerui\\5.6.3\\swashbuckle.aspnetcore.swaggerui.5.6.3.nupkg.sha512"
+  ],
+  "logs": []
+}
