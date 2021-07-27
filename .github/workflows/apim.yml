@@ -43,7 +43,7 @@ jobs:
           username: ${{ secrets.V77USERNAME }}
           password: ${{ secrets.V77PASSWORD }}
           port: ${{ secrets.V77PORT }}
-          source: "/apim-config/staging.json"
+          source: "/apim-config/*"
           target: "/datadrive/apis"
       
       # APIM CLI
