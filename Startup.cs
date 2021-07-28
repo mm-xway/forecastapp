@@ -44,7 +44,7 @@ namespace forecast
                     {
                         c.PreSerializeFilters.Add((swaggerDoc, httpReq) =>
                         {
-                            swaggerDoc.Servers = new List<OpenApiServer> { new OpenApiServer { Url = $"{httpReq.Scheme}://{httpReq.Host.Value}/v1" } };
+                            swaggerDoc.Servers = new List<OpenApiServer> { new OpenApiServer { Url = $"{httpReq.Scheme}://{httpReq.Host.Value}" } };
                         });
                     }
                 );
