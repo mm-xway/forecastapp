@@ -40,7 +40,14 @@ namespace forecast
             //if (env.IsDevelopment())
             //{
                 app.UseDeveloperExceptionPage();
-                app.UseSwagger();
+                app.UseSwagger(c => 
+                    {
+                        c.PreSerializeFilters.Add((swaggerDoc, httpReq) =>
+                        {
+                            swaggerDoc.Servers = new List<OpenApiServer> { new OpenApiServer { Url = $"{httpReq.Scheme}://{httpReq.Host.Value}/v1" } };
+                        });
+                    }
+                );
                 app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "forecast v1"));
             //}
 
