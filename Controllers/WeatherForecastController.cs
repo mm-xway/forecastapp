@@ -36,6 +36,7 @@ namespace forecast.Controllers
             .ToArray();
         }
 
+        [HttpPost]
         public ActionResult Post(WeatherForecast newForecast)
         {
             return Ok(newForecast);
