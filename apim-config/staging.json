@@ -5,23 +5,5 @@
     "state": "unpublished",
     "version": "1.1.0",
     "apiDefinition": "https://forecastdemoapp.azurewebsites.net/swagger/v1/swagger.json",
-    "organization": "API Development", 
-    "securityProfiles":[
-        {
-           "name":"_default",
-           "isDefault":true,
-           "devices":[
-              {
-                 "name":"API Key",
-                 "type":"apiKey",
-                 "order":0,
-                 "properties":{
-                    "apiKeyFieldName":"KeyId",
-                    "takeFrom":"HEADER",
-                    "removeCredentialsOnSuccess":"false"
-                 }
-              }
-           ]
-        }
-     ]
+    "organization": "API Development"
 }
