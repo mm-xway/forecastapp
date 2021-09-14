@@ -35,5 +35,11 @@ namespace forecast.Controllers
             })
             .ToArray();
         }
+
+        [HttpPost]
+        public IActionResult Post(WeatherForecast newForecast)
+        {
+            return new OkObjectResult(newForecast);
+        }
     }
 }
