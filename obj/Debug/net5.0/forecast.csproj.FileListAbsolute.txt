@@ -27,3 +27,4 @@ C:\myvault\dotnetdemos\forecast\obj\Debug\net5.0\forecast.dll
 C:\myvault\dotnetdemos\forecast\obj\Debug\net5.0\ref\forecast.dll
 C:\myvault\dotnetdemos\forecast\obj\Debug\net5.0\forecast.pdb
 C:\myvault\dotnetdemos\forecast\obj\Debug\net5.0\forecast.genruntimeconfig.cache
+C:\myvault\dotnetdemos\forecast\bin\Debug\net5.0\apim-config\staging.json
