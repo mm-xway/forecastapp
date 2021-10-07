@@ -3,7 +3,7 @@
     "name": "Weather Forecast Service - Azure",
     "path": "/forecast/api/v1",
     "state": "unpublished",
-    "version": "1.0.0",
+    "version": "1.1.0",
     "apiDefinition": "https://forecastdemoapp.azurewebsites.net/swagger/v1/swagger.json",
     "organization": "API Development"
 }
