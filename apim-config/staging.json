@@ -1,6 +1,6 @@
 
 {
-    "name": "Weather forecast API",
+    "name": "Weather API",
     "path": "/forecast/api/v1",
     "state": "unpublished",
     "version": "1.0",
